@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WATCH_H
+#define WATCH_H
 
 #include <time.h>
 
@@ -8,10 +9,10 @@
 #define HOUR (60 * MINUTE)
 #define DAY (24 * HOUR)
 
-class Stopwatch {
+class Stopwatch
+{
 private:
 	clock_t elapsed;
-
 	clock_t startTime;
 
 public:
@@ -19,7 +20,6 @@ public:
 	~Stopwatch();
 
 	void start();
-
 	void stop();
 	void reset();
 	void restart();
@@ -32,7 +32,8 @@ public:
 	clock_t getMillisecond();
 };
 
-class Timer {
+class Timer
+{
 private:
 	clock_t startTime;
 	clock_t interval;
@@ -44,3 +45,5 @@ public:
 	void start();
 	bool timeout();
 };
+
+#endif // WATCH_H
