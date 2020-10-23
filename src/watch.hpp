@@ -11,19 +11,21 @@
 
 class Stopwatch
 {
-public:
-	clock_t startTime;
+private:
 	clock_t elapsed;
+	clock_t startTime;
 
 public:
 	Stopwatch();
 	~Stopwatch();
 
+public:
 	void start();
 	void stop();
 	void reset();
 	void restart();
 
+public:
 	clock_t getElapsed();
 	clock_t getDay();
 	clock_t getHour();
@@ -34,17 +36,22 @@ public:
 
 class Timer
 {
-public:
-	clock_t interval;
 private:
 	clock_t startTime;
+	clock_t interval;
 
 public:
+	Timer();
 	Timer(clock_t);
 	~Timer();
 
+public:
 	void start();
 	bool timeout();
+
+public:
+	void setStartTime(clock_t);
+	clock_t getStartTimer();
 };
 
 
@@ -124,6 +131,11 @@ clock_t Stopwatch::getMillisecond()
 }
 
 // Timer
+Timer::Timer() {
+	startTime = 0;
+	interval = 0;
+}
+
 Timer::Timer(clock_t interval)
 {
 	startTime = 0;
@@ -145,6 +157,14 @@ bool Timer::timeout()
 		return true;
 	}
 	return false;
+}
+
+void Timer::setStartTime(clock_t startTime) {
+	this->startTime = startTime;
+}
+
+clock_t Timer::getStartTimer() {
+	return startTime;
 }
 
 #endif // WATCH_H
