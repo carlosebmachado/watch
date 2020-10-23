@@ -163,7 +163,7 @@ void Timer::setStartTime(clock_t startTime) {
 	this->startTime = startTime;
 }
 
-clock_t Timer::getStartTimer() {
+clock_t Timer::getStartTime() {
 	return startTime;
 }
 
