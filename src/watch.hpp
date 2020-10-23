@@ -50,8 +50,8 @@ public:
 	bool timeout();
 
 public:
-	void setStartTime(clock_t);
-	clock_t getStartTime();
+	void setInterval(clock_t);
+	clock_t getInterval();
 };
 
 
@@ -159,12 +159,12 @@ bool Timer::timeout()
 	return false;
 }
 
-void Timer::setStartTime(clock_t startTime) {
-	this->startTime = startTime;
+void Timer::setInterval(clock_t interval) {
+	this->interval = interval;
 }
 
-clock_t Timer::getStartTime() {
-	return startTime;
+clock_t Timer::getInterval() {
+	return interval;
 }
 
 #endif // WATCH_H
