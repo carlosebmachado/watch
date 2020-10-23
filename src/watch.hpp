@@ -51,7 +51,7 @@ public:
 
 public:
 	void setStartTime(clock_t);
-	clock_t getStartTimer();
+	clock_t getStartTime();
 };
 
 
