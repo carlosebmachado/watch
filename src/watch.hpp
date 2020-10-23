@@ -11,9 +11,9 @@
 
 class Stopwatch
 {
-private:
-	clock_t elapsed;
+public:
 	clock_t startTime;
+	clock_t elapsed;
 
 public:
 	Stopwatch();
@@ -34,9 +34,10 @@ public:
 
 class Timer
 {
+public:
+	clock_t interval;
 private:
 	clock_t startTime;
-	clock_t interval;
 
 public:
 	Timer(clock_t);
