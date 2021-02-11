@@ -1,35 +1,47 @@
-#include "watch.hpp"
+#include "watch.h"
 #include <iostream>
 #include <stdlib.h>
 
 using namespace std;
 
-void stopwatch_test() {
+void stopwatch_test()
+{
 	auto sw = Stopwatch();
 	sw.start();
 	system("pause");
 	sw.stop();
 
 	cout << "elapsed: " << sw.getElapsed() << endl;
-	cout << "day: " << sw.getElapsedDay() << endl;
-	cout << "hour: " << sw.getElapsedHour() << endl;
-	cout << "minute: " << sw.getElapsedMinute() << endl;
-	cout << "second: " << sw.getElapsedSecond() << endl;
-	cout << "milli: " << sw.getElapsedMillisecond() << endl;
+	cout << "time: " << sw.getElapsedFormated() << endl;
 
 	sw.restart();
 	system("pause");
 	sw.stop();
 
 	cout << "elapsed: " << sw.getElapsed() << endl;
-	cout << "day: " << sw.getElapsedDay() << endl;
-	cout << "hour: " << sw.getElapsedHour() << endl;
-	cout << "minute: " << sw.getElapsedMinute() << endl;
-	cout << "second: " << sw.getElapsedSecond() << endl;
-	cout << "milli: " << sw.getElapsedMillisecond() << endl;
+	cout << "time: " << sw.getElapsedFormated() << endl;
 }
 
-void timer_test() {
+void chrono_test()
+{
+	auto sw = ChronoStopwatch();
+	sw.start();
+	system("pause");
+	sw.stop();
+
+	cout << "elapsed: " << sw.getElapsed() << endl;
+	cout << sw.getElapsedFormated() << endl;
+
+	sw.restart();
+	system("pause");
+	sw.stop();
+
+	cout << "elapsed: " << sw.getElapsed() << endl;
+	cout << sw.getElapsedFormated() << endl;
+}
+
+void timer_test()
+{
 	auto sw = Stopwatch();
 
 	auto timer1 = Timer();
@@ -60,7 +72,8 @@ void timer_test() {
 }
 
 int main() {
-	//stopwatch_test();
-	timer_test();
+	stopwatch_test();
+	//chrono_test();
+	//timer_test();
 	return 0;
 }
