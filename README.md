@@ -43,4 +43,21 @@ void foo()
 ```
 The ChronoStopwatch will work similarly to Stopwatch. The two differences are that the elapsed time will be in nanosecond precision and the formatted string will start in minutes instead of days ```0min 0sec 0mil 0mic 0mil 0nan```.
 
-
+#### Timer
+To handle events you can use the class Timer. The Timer class will let you activate events at a determined elapsed time.
+```cpp
+void foo()
+{
+    Timer timer(5 * SECOND);
+    timer.start();
+    while (true)
+    {
+        if (timer.timeout())
+        {
+            // Do something...
+            timer.stop();
+        }
+    }
+}
+```
+On the above example code, the timer is set to activate every 5 seconds. It will continue activating at the set time while it does not stopped. If you need that it stops to activate, you can use ```timer.stop();```.
