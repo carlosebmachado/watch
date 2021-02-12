@@ -63,7 +63,7 @@ public:
 		return elapsed;
 	}
 
-	std::string getElapsedFormated()
+	std::string getElapsedFormatted()
 	{
 		long long d = 0, h = 0, m = 0, s = 0, mil = 0, auxElapsed = elapsed;
 		d = auxElapsed / DAY;
@@ -126,7 +126,7 @@ public:
 		return elapsed;
 	}
 
-	std::string getElapsedFormated()
+	std::string getElapsedFormatted()
 	{
 		long long min = 0, sec = 0, mil = 0, mic = 0, nan = 0, auxElapsed = elapsed;
 		sec = auxElapsed / C_SECOND;
