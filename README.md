@@ -6,7 +6,7 @@ Watch is a one file little library that provides an easy interface for time cont
 ## Usage
 
 ### Installing
-The installation is easy, just download the watch.h file in the src folder and put that in your project.
+The installation is easy, just download the latest release and put the watch.h file in your project.
 
 ### Getting Started
 #### Measuring Time
