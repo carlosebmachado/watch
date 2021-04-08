@@ -1,3 +1,10 @@
+/**
+ * MIT License
+ * Copyright (c) 2020 Carlos Machado
+ * https://github.com/carlosebmachado/watch
+ */
+
+
 #ifndef WATCH_H
 #define WATCH_H
 
