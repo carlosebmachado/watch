@@ -1,7 +1,7 @@
 # Watch
 
 ## Description
-Watch is a one file little library that provides an easy interface for time control. The available functionalities are time measurement and timer.
+Watch is a one file little library C++ that provides an easy interface for time control. The available functionalities are time measurement and timer.
 
 ## Usage
 
@@ -61,3 +61,7 @@ void foo()
 }
 ```
 On the above example code, the timer is set to activate every 5 seconds. It will continue activating at the set time while it does not stopped. If you need that it stops to activate, you can use ```timer.stop();```.
+
+## TODO
+- [x] C++ implementation
+- [ ] C implementation
